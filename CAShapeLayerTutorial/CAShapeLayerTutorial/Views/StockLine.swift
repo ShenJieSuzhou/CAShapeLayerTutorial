@@ -31,12 +31,12 @@ struct StockLine: View {
     }
 }
 
-struct Line: View {
-    
-}
+//struct Line: View {
+//
+//}
 
-struct StockLine_Previews: PreviewProvider {
-    static var previews: some View {
-        StockLine()
-    }
-}
+//struct StockLine_Previews: PreviewProvider {
+//    static var previews: some View {
+////        StockLine()
+//    }
+//}

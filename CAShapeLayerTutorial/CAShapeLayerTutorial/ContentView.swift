@@ -6,13 +6,12 @@
 //
 
 import SwiftUI
+import SwiftUICharts
 
 struct ContentView: View {
     var body: some View {
         VStack{
-            Text("Hello, world!")
-                .padding()
-            StockLine()
+            LineView(data: [8,23,54,32,12,37,7,23,43], title: "Line chart", legend: "Full screen")
         }
     }
 }
