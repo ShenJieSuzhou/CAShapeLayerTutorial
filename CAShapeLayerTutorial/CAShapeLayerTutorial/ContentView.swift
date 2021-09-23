@@ -9,10 +9,14 @@ import SwiftUI
 import SwiftUICharts
 
 struct ContentView: View {
+    @State var tabIndex: Int = 0
     var body: some View {
-        VStack{
-            LineView(data: [8,23,54,32,12,37,7,23,43], title: "Line chart", legend: "Full screen")
-        }
+        TabView(selection: $tabIndex,
+                content:  {
+                    TestView().tabItem { Text("折线图") }.tag(1)
+                    Text("Tab Content 2").tabItem { Text("树状图") }.tag(2)
+                    Text("Tab Content 2").tabItem { Text("饼状图") }.tag(2)
+                })
     }
 }
 
