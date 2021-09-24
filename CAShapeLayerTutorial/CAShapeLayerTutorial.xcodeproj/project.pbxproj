@@ -17,6 +17,7 @@
 		E552CF2B26F5E06B0059085F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552CF2A26F5E06B0059085F /* TestView.swift */; };
 		E552CF2E26F5EC770059085F /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E552CF2D26F5EC770059085F /* SwiftUICharts */; };
 		E552CF3426FD80BD0059085F /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552CF3326FD80BD0059085F /* PieChartView.swift */; };
+		E552CF3626FDA75B0059085F /* RectangleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552CF3526FDA75B0059085F /* RectangleChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -31,6 +32,7 @@
 		E552CF2726F5DB950059085F /* StockLine.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StockLine.swift; sourceTree = "<group>"; };
 		E552CF2A26F5E06B0059085F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		E552CF3326FD80BD0059085F /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
+		E552CF3526FDA75B0059085F /* RectangleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -90,6 +92,7 @@
 				E552CF2726F5DB950059085F /* StockLine.swift */,
 				E552CF2A26F5E06B0059085F /* TestView.swift */,
 				E552CF3326FD80BD0059085F /* PieChartView.swift */,
+				E552CF3526FDA75B0059085F /* RectangleChartView.swift */,
 			);
 			path = Views;
 			sourceTree = "<group>";
@@ -174,6 +177,7 @@
 				E552CF1126F5D6D00059085F /* AppDelegate.swift in Sources */,
 				E552CF2B26F5E06B0059085F /* TestView.swift in Sources */,
 				E552CF1326F5D6D00059085F /* SceneDelegate.swift in Sources */,
+				E552CF3626FDA75B0059085F /* RectangleChartView.swift in Sources */,
 				E552CF2826F5DB950059085F /* StockLine.swift in Sources */,
 				E552CF1526F5D6D00059085F /* ContentView.swift in Sources */,
 			);

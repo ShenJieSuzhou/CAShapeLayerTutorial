@@ -14,7 +14,7 @@ struct ContentView: View {
         TabView(selection: $tabIndex,
                 content:  {
                     TestView().tabItem { Text("折线图") }.tag(1)
-                    Text("Tab Content 2").tabItem { Text("树状图") }.tag(2)
+                    RectangleChartView().tabItem { Text("树状图") }.tag(2)
                     PieChartView().tabItem { Text("饼状图") }.tag(3)
                 })
     }
