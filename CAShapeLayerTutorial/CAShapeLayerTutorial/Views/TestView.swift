@@ -52,15 +52,15 @@ struct TestLine: View {
             return path
         }
 
-        let p1 = CGPoint(x: 0, y: points[0])
+        var p1 = CGPoint(x: 0, y: points[0])
         path.move(to: p1)
         for pointIndex in 1..<points.count {
             let p2 = CGPoint(x: step * CGFloat(pointIndex), y: CGFloat(points[pointIndex]))
-            path.addLine(to: p2)
-//            let midPoint = midPointForPoints(p1: p1, p2: p2)
-//            path.addQuadCurve(to: midPoint, control: controlPointForPoints(p1: midPoint, p2: p1))
-//            path.addQuadCurve(to: p2, control: controlPointForPoints(p1: midPoint, p2: p2))
-//            p1 = p2
+//            path.addLine(to: p2)
+            let midPoint = midPointForPoints(p1: p1, p2: p2)
+            path.addQuadCurve(to: midPoint, control: controlPointForPoints(p1: midPoint, p2: p1))
+            path.addQuadCurve(to: p2, control: controlPointForPoints(p1: midPoint, p2: p2))
+            p1 = p2
         }
         return path
     }
