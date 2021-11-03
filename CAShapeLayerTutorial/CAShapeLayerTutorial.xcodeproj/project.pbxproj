@@ -18,6 +18,7 @@
 		E552CF2E26F5EC770059085F /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E552CF2D26F5EC770059085F /* SwiftUICharts */; };
 		E552CF3426FD80BD0059085F /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552CF3326FD80BD0059085F /* PieChartView.swift */; };
 		E552CF3626FDA75B0059085F /* RectangleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552CF3526FDA75B0059085F /* RectangleChartView.swift */; };
+		E553652E2732643900153D66 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553652D2732643900153D66 /* Helper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,6 +34,7 @@
 		E552CF2A26F5E06B0059085F /* TestView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TestView.swift; sourceTree = "<group>"; };
 		E552CF3326FD80BD0059085F /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		E552CF3526FDA75B0059085F /* RectangleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleChartView.swift; sourceTree = "<group>"; };
+		E553652D2732643900153D66 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -66,6 +68,7 @@
 		E552CF0F26F5D6D00059085F /* CAShapeLayerTutorial */ = {
 			isa = PBXGroup;
 			children = (
+				E553652C2732640700153D66 /* Utility */,
 				E552CF2426F5D6E10059085F /* Views */,
 				E552CF1026F5D6D00059085F /* AppDelegate.swift */,
 				E552CF1226F5D6D00059085F /* SceneDelegate.swift */,
@@ -95,6 +98,14 @@
 				E552CF3526FDA75B0059085F /* RectangleChartView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		E553652C2732640700153D66 /* Utility */ = {
+			isa = PBXGroup;
+			children = (
+				E553652D2732643900153D66 /* Helper.swift */,
+			);
+			path = Utility;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -180,6 +191,7 @@
 				E552CF3626FDA75B0059085F /* RectangleChartView.swift in Sources */,
 				E552CF2826F5DB950059085F /* StockLine.swift in Sources */,
 				E552CF1526F5D6D00059085F /* ContentView.swift in Sources */,
+				E553652E2732643900153D66 /* Helper.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
