@@ -19,6 +19,7 @@
 		E552CF3426FD80BD0059085F /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552CF3326FD80BD0059085F /* PieChartView.swift */; };
 		E552CF3626FDA75B0059085F /* RectangleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552CF3526FDA75B0059085F /* RectangleChartView.swift */; };
 		E553652E2732643900153D66 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553652D2732643900153D66 /* Helper.swift */; };
+		E55365312732863500153D66 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55365302732863500153D66 /* BarChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -35,6 +36,7 @@
 		E552CF3326FD80BD0059085F /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		E552CF3526FDA75B0059085F /* RectangleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleChartView.swift; sourceTree = "<group>"; };
 		E553652D2732643900153D66 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
+		E55365302732863500153D66 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -92,6 +94,7 @@
 		E552CF2426F5D6E10059085F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E553652F2732861400153D66 /* BarChart */,
 				E552CF2726F5DB950059085F /* StockLine.swift */,
 				E552CF2A26F5E06B0059085F /* TestView.swift */,
 				E552CF3326FD80BD0059085F /* PieChartView.swift */,
@@ -106,6 +109,14 @@
 				E553652D2732643900153D66 /* Helper.swift */,
 			);
 			path = Utility;
+			sourceTree = "<group>";
+		};
+		E553652F2732861400153D66 /* BarChart */ = {
+			isa = PBXGroup;
+			children = (
+				E55365302732863500153D66 /* BarChartView.swift */,
+			);
+			path = BarChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -189,6 +200,7 @@
 				E552CF2B26F5E06B0059085F /* TestView.swift in Sources */,
 				E552CF1326F5D6D00059085F /* SceneDelegate.swift in Sources */,
 				E552CF3626FDA75B0059085F /* RectangleChartView.swift in Sources */,
+				E55365312732863500153D66 /* BarChartView.swift in Sources */,
 				E552CF2826F5DB950059085F /* StockLine.swift in Sources */,
 				E552CF1526F5D6D00059085F /* ContentView.swift in Sources */,
 				E553652E2732643900153D66 /* Helper.swift in Sources */,
@@ -330,8 +342,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"CAShapeLayerTutorial/Preview Content\"";
+				DEVELOPMENT_TEAM = WSSN499SLU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CAShapeLayerTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -340,6 +354,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.snailgames.MobileSnailKit.CAShapeLayerTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = UniversialDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -350,8 +365,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
-				CODE_SIGN_STYLE = Automatic;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"CAShapeLayerTutorial/Preview Content\"";
+				DEVELOPMENT_TEAM = WSSN499SLU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CAShapeLayerTutorial/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -360,6 +377,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.snailgames.MobileSnailKit.CAShapeLayerTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = UniversialDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
