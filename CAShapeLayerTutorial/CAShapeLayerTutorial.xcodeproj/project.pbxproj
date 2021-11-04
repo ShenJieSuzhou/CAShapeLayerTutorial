@@ -22,6 +22,7 @@
 		E55365312732863500153D66 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55365302732863500153D66 /* BarChartView.swift */; };
 		E5536533273385D500153D66 /* BarChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5536532273385D500153D66 /* BarChartRow.swift */; };
 		E5536535273388BD00153D66 /* BarChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5536534273388BD00153D66 /* BarChartCell.swift */; };
+		E55365372733AC8500153D66 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55365362733AC8500153D66 /* LabelView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -41,6 +42,7 @@
 		E55365302732863500153D66 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
 		E5536532273385D500153D66 /* BarChartRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartRow.swift; sourceTree = "<group>"; };
 		E5536534273388BD00153D66 /* BarChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartCell.swift; sourceTree = "<group>"; };
+		E55365362733AC8500153D66 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 				E55365302732863500153D66 /* BarChartView.swift */,
 				E5536532273385D500153D66 /* BarChartRow.swift */,
 				E5536534273388BD00153D66 /* BarChartCell.swift */,
+				E55365362733AC8500153D66 /* LabelView.swift */,
 			);
 			path = BarChart;
 			sourceTree = "<group>";
@@ -206,6 +209,7 @@
 				E552CF2B26F5E06B0059085F /* TestView.swift in Sources */,
 				E5536533273385D500153D66 /* BarChartRow.swift in Sources */,
 				E552CF1326F5D6D00059085F /* SceneDelegate.swift in Sources */,
+				E55365372733AC8500153D66 /* LabelView.swift in Sources */,
 				E552CF3626FDA75B0059085F /* RectangleChartView.swift in Sources */,
 				E55365312732863500153D66 /* BarChartView.swift in Sources */,
 				E552CF2826F5DB950059085F /* StockLine.swift in Sources */,
