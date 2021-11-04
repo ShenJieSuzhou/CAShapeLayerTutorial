@@ -20,6 +20,8 @@
 		E552CF3626FDA75B0059085F /* RectangleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552CF3526FDA75B0059085F /* RectangleChartView.swift */; };
 		E553652E2732643900153D66 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553652D2732643900153D66 /* Helper.swift */; };
 		E55365312732863500153D66 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55365302732863500153D66 /* BarChartView.swift */; };
+		E5536533273385D500153D66 /* BarChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5536532273385D500153D66 /* BarChartRow.swift */; };
+		E5536535273388BD00153D66 /* BarChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5536534273388BD00153D66 /* BarChartCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -37,6 +39,8 @@
 		E552CF3526FDA75B0059085F /* RectangleChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RectangleChartView.swift; sourceTree = "<group>"; };
 		E553652D2732643900153D66 /* Helper.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Helper.swift; sourceTree = "<group>"; };
 		E55365302732863500153D66 /* BarChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartView.swift; sourceTree = "<group>"; };
+		E5536532273385D500153D66 /* BarChartRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartRow.swift; sourceTree = "<group>"; };
+		E5536534273388BD00153D66 /* BarChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -115,6 +119,8 @@
 			isa = PBXGroup;
 			children = (
 				E55365302732863500153D66 /* BarChartView.swift */,
+				E5536532273385D500153D66 /* BarChartRow.swift */,
+				E5536534273388BD00153D66 /* BarChartCell.swift */,
 			);
 			path = BarChart;
 			sourceTree = "<group>";
@@ -198,12 +204,14 @@
 				E552CF3426FD80BD0059085F /* PieChartView.swift in Sources */,
 				E552CF1126F5D6D00059085F /* AppDelegate.swift in Sources */,
 				E552CF2B26F5E06B0059085F /* TestView.swift in Sources */,
+				E5536533273385D500153D66 /* BarChartRow.swift in Sources */,
 				E552CF1326F5D6D00059085F /* SceneDelegate.swift in Sources */,
 				E552CF3626FDA75B0059085F /* RectangleChartView.swift in Sources */,
 				E55365312732863500153D66 /* BarChartView.swift in Sources */,
 				E552CF2826F5DB950059085F /* StockLine.swift in Sources */,
 				E552CF1526F5D6D00059085F /* ContentView.swift in Sources */,
 				E553652E2732643900153D66 /* Helper.swift in Sources */,
+				E5536535273388BD00153D66 /* BarChartCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

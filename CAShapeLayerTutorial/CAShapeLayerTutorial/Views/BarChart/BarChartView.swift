@@ -18,16 +18,16 @@ struct BarChartView: View {
     public var cornerImage: Image
     public var valueSpecifier: String
     
-//    @State private var touchLocation: CGFloat = -1.0
-//    @State private var showValue: Bool = false
-//    @State private var showLabelValue: Bool = false
-//    @State private var currentValue: Double = 0 {
-//        didSet {
-//            if (oldValue != self.currentValue && self.showValue){
-//                
-//            }
-//        }
-//    }
+    @State private var touchLocation: CGFloat = -1.0
+    @State private var showValue: Bool = false
+    @State private var showLabelValue: Bool = false
+    @State private var currentValue: Double = 0 {
+        didSet {
+            if (oldValue != self.currentValue && self.showValue){
+                
+            }
+        }
+    }
     
     var isFullWidth: Bool {
         return self.formSize == ChartForm.large
@@ -47,13 +47,46 @@ struct BarChartView: View {
     public var body: some View {
         ZStack{
             Rectangle()
+                .fill(self.colorScheme == .dark ? self.darkModeStyle.backgroundColor : self.style.backgroundColor)
+                .cornerRadius(20)
+                .shadow(color: self.style.dropShadowColor, radius: self.dropShadow ? 8 : 0)
             VStack(alignment: .leading) {
                 HStack{
                     
                 }
                 
-            }
+            }.frame(minWidth: self.formSize.width,
+                    maxWidth: self.isFullWidth ? .infinity : self.formSize.width,
+                    minHeight: self.formSize.height,
+                    maxHeight: self.formSize.height)
+                .gesture(DragGesture().onChanged({ value in
+                    self.touchLocation = value.location.x / self.formSize.width
+                    self.showValue = true
+                    self.currentValue = self.getCurrentValue()?.1 ?? 0
+                    if self.data.valuesGiven && self.formSize == ChartForm.medium {
+                        self.showLabelValue = true
+                    }
+                }).onEnded({ value in
+                    self.showValue = false
+                    self.showLabelValue = false
+                    self.touchLocation = -1
+                })
+                )
+                .gesture(TapGesture())
         }
+    }
+    
+    func getLabelViewOffset(touchLocation: CGFloat) -> CGFloat {
+        return min(self.formSize.width - 110, max(10, (self.touchLocation * self.formSize.width) - 50))
+    }
+    
+    func getCurrentValue() -> (String, Double)? {
+        guard self.data.points.count > 0 else {
+            return nil
+        }
+        
+        let index = max(0, min(self.data.points.count - 1, Int(floor(self.touchLocation * self.formSize.width) / (self.formSize.width / CGFloat(self.data.points.count)))))
+        return self.data.points[index]
     }
 }
 

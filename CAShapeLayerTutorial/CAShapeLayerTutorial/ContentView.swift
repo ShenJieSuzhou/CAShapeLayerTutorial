@@ -13,10 +13,24 @@ struct ContentView: View {
     var body: some View {
         TabView(selection: $tabIndex,
                 content:  {
+                    BarCharts().tabItem {
+                        Group {
+                            Image(systemName: "chart.bar")
+                            Text("Bar charts")
+                        }
+                    }.tag(0)
                     TestView().tabItem { Text("折线图") }.tag(1)
                     RectangleChartView().tabItem { Text("树状图") }.tag(2)
                     PieChartView().tabItem { Text("饼状图") }.tag(3)
                 })
+    }
+}
+
+struct BarCharts: View {
+    var body: some View {
+        VStack {
+            BarChartView(data: ChartData(points: [8,3]), title: "Hello", style: Styles.barChartStyleOrangeLight)
+        }
     }
 }
 
