@@ -24,21 +24,12 @@ struct ContentView: View {
                             Text("Line charts")
                         }
                     }.tag(1)
-                    BarCharts().tabItem {
+                    PieChart().tabItem {
                         Group {
-                            Image(systemName: "chart.bar")
-                            Text("Bar charts")
+                            Image(systemName: "chart.pie")
+                            Text("Pie charts")
                         }
                     }.tag(2)
-                    BarCharts().tabItem {
-                        Group {
-                            Image(systemName: "chart.bar")
-                            Text("Bar charts")
-                        }
-                    }.tag(3)
-//                    TestView().tabItem { Text("折线图") }.tag(1)
-//                    RectangleChartView().tabItem { Text("树状图") }.tag(2)
-//                    PieChartView().tabItem { Text("饼状图") }.tag(3)
                 })
     }
 }
@@ -55,6 +46,14 @@ struct LineChart: View {
     var body: some View {
         VStack {
             LineChartView(data: [8,23,54,32,12,37,7,23,43], title: "Line", style: Styles.lineChartStyleOne)
+        }
+    }
+}
+
+struct PieChart: View {
+    var body: some View {
+        VStack {
+            PieChartView(data: [8,23,54,32,12,37,7,23,43], title: "Pie chart", style: Styles.pieChartStyleOne)
         }
     }
 }
