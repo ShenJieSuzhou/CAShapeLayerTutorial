@@ -18,10 +18,10 @@ struct ContentView: View {
                             Text("Bar charts")
                         }
                     }.tag(0)
-                    BarCharts().tabItem {
+                    LineChart().tabItem {
                         Group {
-                            Image(systemName: "chart.bar")
-                            Text("Bar charts")
+                            Image(systemName: "waveform.path.ecg")
+                            Text("Line charts")
                         }
                     }.tag(1)
                     BarCharts().tabItem {
@@ -47,6 +47,14 @@ struct BarCharts: View {
     var body: some View {
         VStack {
             BarChartView(data: ChartData(points: [8,23,54,32,12,37,7,23,43]), title: "value", style: Styles.barChartStyleNeonBlueLight)
+        }
+    }
+}
+
+struct LineChart: View {
+    var body: some View {
+        VStack {
+            LineChartView(data: [8,23,54,32,12,37,7,23,43], title: "Line", style: Styles.lineChartStyleOne)
         }
     }
 }

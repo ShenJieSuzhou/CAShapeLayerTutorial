@@ -23,6 +23,11 @@
 		E5536533273385D500153D66 /* BarChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5536532273385D500153D66 /* BarChartRow.swift */; };
 		E5536535273388BD00153D66 /* BarChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5536534273388BD00153D66 /* BarChartCell.swift */; };
 		E55365372733AC8500153D66 /* LabelView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55365362733AC8500153D66 /* LabelView.swift */; };
+		E553653A2734F6D300153D66 /* LineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55365392734F6D300153D66 /* LineChartView.swift */; };
+		E553653C2734F6E400153D66 /* MutiLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553653B2734F6E400153D66 /* MutiLineChartView.swift */; };
+		E553653E2734F6F400153D66 /* Line.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553653D2734F6F400153D66 /* Line.swift */; };
+		E55365402734F72500153D66 /* IndicatorPoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553653F2734F72500153D66 /* IndicatorPoint.swift */; };
+		E55365422735071200153D66 /* Path+QuadCurve.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55365412735071200153D66 /* Path+QuadCurve.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -43,6 +48,11 @@
 		E5536532273385D500153D66 /* BarChartRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartRow.swift; sourceTree = "<group>"; };
 		E5536534273388BD00153D66 /* BarChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BarChartCell.swift; sourceTree = "<group>"; };
 		E55365362733AC8500153D66 /* LabelView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LabelView.swift; sourceTree = "<group>"; };
+		E55365392734F6D300153D66 /* LineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LineChartView.swift; sourceTree = "<group>"; };
+		E553653B2734F6E400153D66 /* MutiLineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MutiLineChartView.swift; sourceTree = "<group>"; };
+		E553653D2734F6F400153D66 /* Line.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Line.swift; sourceTree = "<group>"; };
+		E553653F2734F72500153D66 /* IndicatorPoint.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = IndicatorPoint.swift; sourceTree = "<group>"; };
+		E55365412735071200153D66 /* Path+QuadCurve.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Path+QuadCurve.swift"; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -100,6 +110,7 @@
 		E552CF2426F5D6E10059085F /* Views */ = {
 			isa = PBXGroup;
 			children = (
+				E55365382734D3A900153D66 /* LineChart */,
 				E553652F2732861400153D66 /* BarChart */,
 				E552CF2726F5DB950059085F /* StockLine.swift */,
 				E552CF2A26F5E06B0059085F /* TestView.swift */,
@@ -126,6 +137,18 @@
 				E55365362733AC8500153D66 /* LabelView.swift */,
 			);
 			path = BarChart;
+			sourceTree = "<group>";
+		};
+		E55365382734D3A900153D66 /* LineChart */ = {
+			isa = PBXGroup;
+			children = (
+				E55365392734F6D300153D66 /* LineChartView.swift */,
+				E553653B2734F6E400153D66 /* MutiLineChartView.swift */,
+				E553653D2734F6F400153D66 /* Line.swift */,
+				E553653F2734F72500153D66 /* IndicatorPoint.swift */,
+				E55365412735071200153D66 /* Path+QuadCurve.swift */,
+			);
+			path = LineChart;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -207,14 +230,19 @@
 				E552CF3426FD80BD0059085F /* PieChartView.swift in Sources */,
 				E552CF1126F5D6D00059085F /* AppDelegate.swift in Sources */,
 				E552CF2B26F5E06B0059085F /* TestView.swift in Sources */,
+				E553653A2734F6D300153D66 /* LineChartView.swift in Sources */,
+				E55365422735071200153D66 /* Path+QuadCurve.swift in Sources */,
 				E5536533273385D500153D66 /* BarChartRow.swift in Sources */,
 				E552CF1326F5D6D00059085F /* SceneDelegate.swift in Sources */,
+				E55365402734F72500153D66 /* IndicatorPoint.swift in Sources */,
 				E55365372733AC8500153D66 /* LabelView.swift in Sources */,
 				E552CF3626FDA75B0059085F /* RectangleChartView.swift in Sources */,
 				E55365312732863500153D66 /* BarChartView.swift in Sources */,
+				E553653E2734F6F400153D66 /* Line.swift in Sources */,
 				E552CF2826F5DB950059085F /* StockLine.swift in Sources */,
 				E552CF1526F5D6D00059085F /* ContentView.swift in Sources */,
 				E553652E2732643900153D66 /* Helper.swift in Sources */,
+				E553653C2734F6E400153D66 /* MutiLineChartView.swift in Sources */,
 				E5536535273388BD00153D66 /* BarChartCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
