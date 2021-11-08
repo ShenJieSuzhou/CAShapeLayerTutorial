@@ -121,8 +121,8 @@ extension Path {
         if (points.count < 2){
             return path
         }
+        
         let offset = globalOffset ?? points.min()!
-//        guard let offset = points.min() else { return path }
         var p1 = CGPoint(x: 0, y: CGFloat(points[0]-offset)*step.y)
         path.move(to: p1)
         for pointIndex in 1..<points.count {
@@ -140,9 +140,8 @@ extension Path {
         if (points.count < 2){
             return path
         }
+        
         let offset = globalOffset ?? points.min()!
-
-//        guard let offset = points.min() else { return path }
         path.move(to: .zero)
         var p1 = CGPoint(x: 0, y: CGFloat(points[0]-offset)*step.y)
         path.addLine(to: p1)

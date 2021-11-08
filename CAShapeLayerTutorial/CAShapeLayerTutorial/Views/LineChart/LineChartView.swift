@@ -23,7 +23,7 @@ struct LineChartView: View {
     @State private var showIndicatorDot: Bool = false
     @State private var currentValue: Double = 2 {
         didSet {
-            
+            HapticFeedback.playSelection()
         }
     }
     
@@ -42,11 +42,13 @@ struct LineChartView: View {
         self.style = style
         self.darkModeStyle = style.darkModeStyle != nil ? style.darkModeStyle! : Styles.lineViewDarkMode
         self.formSize = form!
+        frame = CGSize(width: self.formSize.width, height: self.formSize.height/2)
         self.dropShadow = dropShadow!
         self.valueSpecifier = valueSpecifier!
         self.rateValue = rateValue
     }
     
+    var frame = CGSize(width: 180, height: 120)
     private var rateValue: Int?
     
     var body: some View {
@@ -54,11 +56,36 @@ struct LineChartView: View {
             RoundedRectangle(cornerRadius: 20)
                 .fill(self.colorScheme == .dark ? self.darkModeStyle.backgroundColor : self.style.backgroundColor)
                 .frame(width: formSize.width, height: formSize.height, alignment: .center)
-                .shadow(color: self.style.dropShadowColor, radius: self.dropShadow ? 9 : 0)
+                .shadow(color: self.style.dropShadowColor, radius: self.dropShadow ? 8 : 0)
         
-            VStack(alignment: .leading, spacing: 0) {
+            VStack(alignment: .leading, spacing: 8) {
                 if !self.showIndicatorDot {
-                    
+                    VStack(alignment: .leading, spacing: 8){
+                        Text(self.title)
+                            .font(.title)
+                            .bold()
+                            .foregroundColor(self.colorScheme == .dark ? self.darkModeStyle.textColor : self.style.textColor)
+                        if (self.legend != nil){
+                            Text(self.legend!)
+                                .font(.callout)
+                                .foregroundColor(self.colorScheme == .dark ? self.darkModeStyle.legendTextColor :self.style.legendTextColor)
+                        }
+                        HStack {
+                            
+                            if (self.rateValue ?? 0 != 0)
+                            {
+                                if (self.rateValue ?? 0 >= 0){
+                                    Image(systemName: "arrow.up")
+                                }else{
+                                    Image(systemName: "arrow.down")
+                                }
+                                Text("\(self.rateValue!)%")
+                            }
+                        }
+                    }
+                    .transition(.opacity)
+                    .animation(.easeIn(duration: 0.1))
+                    .padding([.leading, .top])
                 } else {
                     HStack{
                         Spacer()
@@ -79,7 +106,7 @@ struct LineChartView: View {
                          maxDataValue: .constant(nil)
                     )
                 }
-                .frame(width: formSize.width, height: formSize.height, alignment: .center)
+                .frame(width: formSize.width, height: formSize.height/2, alignment: .center)
                 .clipShape(RoundedRectangle(cornerRadius: 20))
                 .offset(x: 0, y: 0)
             }

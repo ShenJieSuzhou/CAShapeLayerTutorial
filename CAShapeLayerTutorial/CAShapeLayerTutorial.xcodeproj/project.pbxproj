@@ -30,6 +30,7 @@
 		E553655C27351CE400153D66 /* PieChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553655B27351CE400153D66 /* PieChartView.swift */; };
 		E553655E2735203200153D66 /* PieChartRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553655D2735203200153D66 /* PieChartRow.swift */; };
 		E55365602735205900153D66 /* PieChartCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553655F2735205900153D66 /* PieChartCell.swift */; };
+		E55365662738F89200153D66 /* LegendLineChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55365652738F89200153D66 /* LegendLineChartView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -57,6 +58,7 @@
 		E553655B27351CE400153D66 /* PieChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartView.swift; sourceTree = "<group>"; };
 		E553655D2735203200153D66 /* PieChartRow.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartRow.swift; sourceTree = "<group>"; };
 		E553655F2735205900153D66 /* PieChartCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PieChartCell.swift; sourceTree = "<group>"; };
+		E55365652738F89200153D66 /* LegendLineChartView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LegendLineChartView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -151,6 +153,7 @@
 				E553653D2734F6F400153D66 /* Line.swift */,
 				E553653F2734F72500153D66 /* IndicatorPoint.swift */,
 				E55365412735071200153D66 /* Path+QuadCurve.swift */,
+				E55365652738F89200153D66 /* LegendLineChartView.swift */,
 			);
 			path = LineChart;
 			sourceTree = "<group>";
@@ -245,6 +248,7 @@
 				E553655C27351CE400153D66 /* PieChartView.swift in Sources */,
 				E552CF1126F5D6D00059085F /* AppDelegate.swift in Sources */,
 				E552CF2B26F5E06B0059085F /* TestView.swift in Sources */,
+				E55365662738F89200153D66 /* LegendLineChartView.swift in Sources */,
 				E553653A2734F6D300153D66 /* LineChartView.swift in Sources */,
 				E55365422735071200153D66 /* Path+QuadCurve.swift in Sources */,
 				E5536533273385D500153D66 /* BarChartRow.swift in Sources */,
