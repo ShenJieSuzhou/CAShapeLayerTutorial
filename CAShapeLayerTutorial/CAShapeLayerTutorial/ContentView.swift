@@ -36,6 +36,12 @@ struct ContentView: View {
                             Text("MutiLine charts")
                         }
                     }.tag(3)
+                    LegendLineChart().tabItem {
+                        Group {
+                            Image(systemName: "waveform.path.ecg")
+                            Text("Legend charts")
+                        }
+                    }.tag(4)
                 })
     }
 }
@@ -69,6 +75,14 @@ struct MutiLineChart: View {
     var body: some View {
         VStack {
             MutiLineChartView(data: [([8,23,54,32,12,37,7,23,43], GradientColors.orange), ([5,30,40,12,16,7,57,30,13], GradientColors.purple)], title: "title")
+        }
+    }
+}
+
+struct LegendLineChart: View {
+    var body: some View {
+        VStack {
+            LegendLineChartView(data: [8,23,54,32,12,37,7,23,43], title: "Hello")
         }
     }
 }
