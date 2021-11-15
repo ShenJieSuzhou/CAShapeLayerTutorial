@@ -3,7 +3,7 @@
 	archiveVersion = 1;
 	classes = {
 	};
-	objectVersion = 52;
+	objectVersion = 50;
 	objects = {
 
 /* Begin PBXBuildFile section */
@@ -15,7 +15,6 @@
 		E552CF1D26F5D6D20059085F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E552CF1B26F5D6D20059085F /* LaunchScreen.storyboard */; };
 		E552CF2826F5DB950059085F /* StockLine.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552CF2726F5DB950059085F /* StockLine.swift */; };
 		E552CF2B26F5E06B0059085F /* TestView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552CF2A26F5E06B0059085F /* TestView.swift */; };
-		E552CF2E26F5EC770059085F /* SwiftUICharts in Frameworks */ = {isa = PBXBuildFile; productRef = E552CF2D26F5EC770059085F /* SwiftUICharts */; };
 		E552CF3626FDA75B0059085F /* RectangleChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E552CF3526FDA75B0059085F /* RectangleChartView.swift */; };
 		E553652E2732643900153D66 /* Helper.swift in Sources */ = {isa = PBXBuildFile; fileRef = E553652D2732643900153D66 /* Helper.swift */; };
 		E55365312732863500153D66 /* BarChartView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E55365302732863500153D66 /* BarChartView.swift */; };
@@ -68,7 +67,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				E552CF2E26F5EC770059085F /* SwiftUICharts in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -188,7 +186,6 @@
 			);
 			name = CAShapeLayerTutorial;
 			packageProductDependencies = (
-				E552CF2D26F5EC770059085F /* SwiftUICharts */,
 			);
 			productName = CAShapeLayerTutorial;
 			productReference = E552CF0D26F5D6D00059085F /* CAShapeLayerTutorial.app */;
@@ -218,7 +215,6 @@
 			);
 			mainGroup = E552CF0426F5D6D00059085F;
 			packageReferences = (
-				E552CF2C26F5EC770059085F /* XCRemoteSwiftPackageReference "ChartView" */,
 			);
 			productRefGroup = E552CF0E26F5D6D00059085F /* Products */;
 			projectDirPath = "";
@@ -336,7 +332,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
 				MTL_FAST_MATH = YES;
 				ONLY_ACTIVE_ARCH = YES;
@@ -391,7 +387,7 @@
 				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
 				GCC_WARN_UNUSED_FUNCTION = YES;
 				GCC_WARN_UNUSED_VARIABLE = YES;
-				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.0;
 				MTL_ENABLE_DEBUG_INFO = NO;
 				MTL_FAST_MATH = YES;
 				SDKROOT = iphoneos;
@@ -412,13 +408,14 @@
 				DEVELOPMENT_TEAM = WSSN499SLU;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CAShapeLayerTutorial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.snailgames.MobileSnailKit.CAShapeLayerTutorial;
+				PRODUCT_BUNDLE_IDENTIFIER = com.snailgames.TestForIAP;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = UniversialDev;
+				PROVISIONING_PROFILE_SPECIFIER = TestForIAP;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -432,16 +429,17 @@
 				CODE_SIGN_IDENTITY = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				DEVELOPMENT_ASSET_PATHS = "\"CAShapeLayerTutorial/Preview Content\"";
-				DEVELOPMENT_TEAM = WSSN499SLU;
+				DEVELOPMENT_TEAM = 8SRP47XFRN;
 				ENABLE_PREVIEWS = YES;
 				INFOPLIST_FILE = CAShapeLayerTutorial/Info.plist;
+				IPHONEOS_DEPLOYMENT_TARGET = 14.5;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.snailgames.MobileSnailKit.CAShapeLayerTutorial;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				PROVISIONING_PROFILE_SPECIFIER = UniversialDev;
+				PROVISIONING_PROFILE_SPECIFIER = UniversalSnailDev;
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -469,25 +467,6 @@
 			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
-
-/* Begin XCRemoteSwiftPackageReference section */
-		E552CF2C26F5EC770059085F /* XCRemoteSwiftPackageReference "ChartView" */ = {
-			isa = XCRemoteSwiftPackageReference;
-			repositoryURL = "https://github.com/AppPear/ChartView";
-			requirement = {
-				kind = upToNextMajorVersion;
-				minimumVersion = 1.5.5;
-			};
-		};
-/* End XCRemoteSwiftPackageReference section */
-
-/* Begin XCSwiftPackageProductDependency section */
-		E552CF2D26F5EC770059085F /* SwiftUICharts */ = {
-			isa = XCSwiftPackageProductDependency;
-			package = E552CF2C26F5EC770059085F /* XCRemoteSwiftPackageReference "ChartView" */;
-			productName = SwiftUICharts;
-		};
-/* End XCSwiftPackageProductDependency section */
 	};
 	rootObject = E552CF0526F5D6D00059085F /* Project object */;
 }
