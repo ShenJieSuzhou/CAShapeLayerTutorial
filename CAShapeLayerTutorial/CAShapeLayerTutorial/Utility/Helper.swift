@@ -97,20 +97,20 @@ public struct Styles {
         legendTextColor: Color.gray,
         dropShadowColor: Color.gray)
     
-    public static let barChartMidnightGreenDark = ChartStyle(
-        backgroundColor: Color(hexString: "#36534D"), //3B5147, 313D34
-        accentColor: Color(hexString: "#FFD603"),
-        secondGradientColor: Color(hexString: "#FFCA04"),
-        textColor: Color.white,
-        legendTextColor: Color(hexString: "#D2E5E1"),
-        dropShadowColor: Color.gray)
-    
     public static let barChartMidnightGreenLight = ChartStyle(
         backgroundColor: Color.white,
         accentColor: Color(hexString: "#84A094"), //84A094 , 698378
         secondGradientColor: Color(hexString: "#50675D"),
         textColor: Color.black,
         legendTextColor:Color.gray,
+        dropShadowColor: Color.gray)
+    
+    public static let barChartMidnightGreenDark = ChartStyle(
+        backgroundColor: Color(hexString: "#36534D"), //3B5147, 313D34
+        accentColor: Color(hexString: "#FFD603"),
+        secondGradientColor: Color(hexString: "#FFCA04"),
+        textColor: Color.white,
+        legendTextColor: Color(hexString: "#D2E5E1"),
         dropShadowColor: Color.gray)
     
     public static let pieChartStyleOne = ChartStyle(
