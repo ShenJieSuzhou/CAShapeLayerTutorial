@@ -42,14 +42,14 @@ struct ContentView: View {
                             Text("Legend charts")
                         }
                     }.tag(4)
-                })
+        })
     }
 }
 
 struct BarCharts: View {
     var body: some View {
         VStack {
-            BarChartView(data: ChartData(points: [8,23,54,32,12,37,7,23,43]), title: "value", style: Styles.barChartStyleNeonBlueLight)
+            BarChartView(data: ChartData(points: [8,23,54,32,12,37,7,23,43]), title: "value", style: Styles.barChartStyleOrangeDark)
         }
     }
 }

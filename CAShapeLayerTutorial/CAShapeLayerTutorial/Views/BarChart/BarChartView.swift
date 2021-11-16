@@ -19,6 +19,7 @@ struct BarChartView: View {
     public var valueSpecifier: String
     
     @State private var touchLocation: CGFloat = -1.0
+    @State private var touchPoint: CGPoint = .zero
     @State private var showValue: Bool = false
     @State private var showLabelValue: Bool = false
     @State private var currentValue: Double = 0 {
@@ -66,6 +67,7 @@ struct BarChartView: View {
                         .imageScale(.large)
                         .foregroundColor(self.colorScheme == .dark ? self.darkModeStyle.legendTextColor : self.style.legendTextColor)
                 }.padding()
+
                 BarChartRow(data: data.points.map{$0.1},
                             accentColor: self.colorScheme == .dark ? self.darkModeStyle.accentColor : self.style.accentColor,
                             gradient: self.colorScheme == .dark ? self.darkModeStyle.gradientColor : self.style.gradientColor,
@@ -81,6 +83,7 @@ struct BarChartView: View {
                 minHeight: self.formSize.height,
                 maxHeight: self.formSize.height)
             .gesture(DragGesture().onChanged({ value in
+                self.touchPoint = value.location
                 self.touchLocation = value.location.x / self.formSize.width
                 self.showValue = true
                 self.currentValue = self.getCurrentValue()?.1 ?? 0
@@ -121,8 +124,4 @@ struct BarChartView: View {
     }
 }
 
-struct BarChartView_Previews: PreviewProvider {
-    static var previews: some View {
-        BarChartView(data: TestData.values, title: "Test")
-    }
-}
+

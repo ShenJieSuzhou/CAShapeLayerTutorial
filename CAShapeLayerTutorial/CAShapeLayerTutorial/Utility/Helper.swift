@@ -9,6 +9,7 @@ import Foundation
 import SwiftUI
 
 public struct Colors {
+    public static let classicBackground:Color = Color(hexString: "#122051")
     public static let color1:Color = Color(hexString: "#E2FAE7")
     public static let color1Accent:Color = Color(hexString: "#72BF82")
     public static let color2:Color = Color(hexString: "#EEF1FF")
@@ -74,7 +75,7 @@ public struct Styles {
         dropShadowColor: Color.gray)
     
     public static let barChartStyleOrangeDark = ChartStyle(
-        backgroundColor: Color.black,
+        backgroundColor: Colors.classicBackground,
         accentColor: Colors.OrangeStart,
         secondGradientColor: Colors.OrangeEnd,
         textColor: Color.white,
@@ -90,7 +91,7 @@ public struct Styles {
         dropShadowColor: Color.gray)
     
     public static let barChartStyleNeonBlueDark = ChartStyle(
-        backgroundColor: Color.black,
+        backgroundColor: Colors.classicBackground,
         accentColor: Colors.GradientNeonBlue,
         secondGradientColor: Colors.GradientPurple,
         textColor: Color.white,
@@ -99,14 +100,14 @@ public struct Styles {
     
     public static let barChartMidnightGreenLight = ChartStyle(
         backgroundColor: Color.white,
-        accentColor: Color(hexString: "#84A094"), //84A094 , 698378
+        accentColor: Color(hexString: "#84A094"),
         secondGradientColor: Color(hexString: "#50675D"),
         textColor: Color.black,
         legendTextColor:Color.gray,
         dropShadowColor: Color.gray)
     
     public static let barChartMidnightGreenDark = ChartStyle(
-        backgroundColor: Color(hexString: "#36534D"), //3B5147, 313D34
+        backgroundColor: Colors.classicBackground,
         accentColor: Color(hexString: "#FFD603"),
         secondGradientColor: Color(hexString: "#FFCA04"),
         textColor: Color.white,
@@ -122,7 +123,7 @@ public struct Styles {
         dropShadowColor: Color.gray)
     
     public static let lineViewDarkMode = ChartStyle(
-        backgroundColor: Color.black,
+        backgroundColor: Colors.classicBackground,
         accentColor: Colors.OrangeStart,
         secondGradientColor: Colors.OrangeEnd,
         textColor: Color.white,
@@ -229,17 +230,6 @@ public class MultiLineChartData: ChartData {
     public func getGradient() -> GradientColor {
         return self.gradient
     }
-}
-
-public class TestData{
-    static public var data:ChartData = ChartData(points: [37,72,51,22,39,47,66,85,50])
-    static public var values:ChartData = ChartData(values: [("2017 Q3",220),
-                                                            ("2017 Q4",1550),
-                                                            ("2018 Q1",8180),
-                                                            ("2018 Q2",18440),
-                                                            ("2018 Q3",55840),
-                                                            ("2018 Q4",63150), ("2019 Q1",50900), ("2019 Q2",77550), ("2019 Q3",79600), ("2019 Q4",92550)])
-    
 }
 
 extension Color {

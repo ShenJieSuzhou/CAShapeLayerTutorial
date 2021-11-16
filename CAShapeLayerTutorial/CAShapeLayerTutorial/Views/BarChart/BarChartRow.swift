@@ -22,11 +22,11 @@ struct BarChartRow: View {
     @Binding var touchLocation: CGFloat
     public var body: some View {
         GeometryReader { geometry in
-            HStack(alignment: .bottom, spacing: (geometry.frame(in: .local).width - 22) / CGFloat(self.data.count * 3)) {
+            HStack(alignment: .bottom, spacing: getSpaceWidth(width: geometry.frame(in: .local).width - 20)) {
                 ForEach(0..<self.data.count, id: \.self){ i in
                     BarChartCell(value: self.normalizedValue(index: i),
                                  index: i,
-                                 width: Float(geometry.frame(in: .local).width - 22),
+                                 width: Float(geometry.frame(in: .local).width - 20),
                                  numberOfDataPoints: self.data.count,
                                  accentColor: self.accentColor,
                                  gradient: self.gradient,
@@ -34,14 +34,18 @@ struct BarChartRow: View {
                         .scaleEffect(self.touchLocation > CGFloat(i) / CGFloat(self.data.count) && self.touchLocation < CGFloat(i+1) / CGFloat(self.data.count) ? CGSize(width: 1.4, height: 1.1) : CGSize(width: 1, height: 1), anchor: .bottom)
                         .animation(.spring())
                 }
-            }
+            }.padding([.top, .leading, .trailing], 20)
         }
-        .padding([.top, .leading, .trailing], 10)
     }
 
     
     func normalizedValue(index: Int) -> Double {
         return Double(self.data[index]) / Double(self.maxValue)
+    }
+    
+    func getSpaceWidth(width: Double) -> Double{
+        let perCellWidth: Double = width / (Double(data.count) * 1.5)
+        return (width - (perCellWidth * Double(data.count))) / Double((data.count + 1))
     }
 }
 
