@@ -30,18 +30,12 @@ struct ContentView: View {
                             Text("Pie charts")
                         }
                     }.tag(2)
-                    MutiLineChart().tabItem {
-                        Group {
-                            Image(systemName: "waveform.path.ecg")
-                            Text("MutiLine charts")
-                        }
-                    }.tag(3)
                     LegendLineChart().tabItem {
                         Group {
                             Image(systemName: "waveform.path.ecg")
                             Text("Legend charts")
                         }
-                    }.tag(4)
+                    }.tag(3)
         })
     }
 }
@@ -49,15 +43,16 @@ struct ContentView: View {
 struct BarCharts: View {
     var body: some View {
         VStack {
-            BarChartView(data: ChartData(points: [8,23,54,32,12,37,7,23,43]), title: "value", style: Styles.barChartStyleOrangeDark)
+            BarChartView(data: ChartData(points: [8,23,54,32,12,37,7,23,43]), title: "数值", style: Styles.barChartStyleOrangeDark)
         }
     }
 }
 
 struct LineChart: View {
     var body: some View {
-        VStack {
-            LineChartView(data: [8,23,54,32,12,37,7,23,43], title: "Line", style: Styles.lineChartStyleOne)
+        HStack {
+            LineChartView(data: [8,23,54,32,12,37,7,23,43], title: "", style: Styles.lineChartStyleOne).padding()
+            MutiLineChartView(data: [([8,23,54,32,12,37,7,23,43], GradientColors.orange), ([5,30,40,12,16,7,57,30,13], GradientColors.purple)], title: "")
         }
     }
 }
@@ -65,7 +60,7 @@ struct LineChart: View {
 struct PieChart: View {
     var body: some View {
         VStack {
-            PieChartView(data: [8,23,54,32,12,37,7,23,43], title: "Pie chart", style: Styles.pieChartStyleOne)
+            PieChartView(data: [8,23,54,32,12,37,7,23,43], title: "", style: Styles.pieChartStyleOne)
         }
     }
 }
@@ -82,7 +77,7 @@ struct MutiLineChart: View {
 struct LegendLineChart: View {
     var body: some View {
         VStack {
-            LegendLineChartView(data: [8,23,54,32,12,37,7,23,43], title: "Hello")
+            LegendLineChartView(data: [8,23,54,32,12,37,7,23,43], title: "")
         }
     }
 }

@@ -92,7 +92,7 @@ struct LegendLineChartView: View {
                         .opacity(self.opacity)
                         .offset(x: self.dragLocation.x - geometry.frame(in: .local).size.width / 2, y: 36)
                     
-                }.frame(width: geometry.frame(in: .local).size.width, height: 240, alignment: .center)
+                }.frame(width: geometry.frame(in: .local).size.width, height: 220, alignment: .center)
                     .gesture(
                         DragGesture().onChanged({ value in
                             self.dragLocation = value.location
