@@ -71,7 +71,6 @@ struct LineChartView: View {
                                 .foregroundColor(self.colorScheme == .dark ? self.darkModeStyle.legendTextColor :self.style.legendTextColor)
                         }
                         HStack {
-                            
                             if (self.rateValue ?? 0 != 0)
                             {
                                 if (self.rateValue ?? 0 >= 0){
@@ -97,14 +96,8 @@ struct LineChartView: View {
                     .transition(.scale)
                 }
                 Spacer()
-                GeometryReader{ geometry in
-                    Line(data: self.data,
-                         frame: .constant(geometry.frame(in: .local)),
-                         touchLocation: self.$touchLocation,
-                         showIndicator: self.$showIndicatorDot,
-                         minDataValue: .constant(nil),
-                         maxDataValue: .constant(nil)
-                    )
+                GeometryReader{ geometry in                    
+                    Line(data: self.data, frame: .constant(geometry.frame(in: .local)), touchLocation: self.$touchLocation, showIndicator: self.$showIndicatorDot, minDataValue: .constant(nil), maxDataValue: .constant(nil), gradient: GradientColors.green)
                 }
                 .frame(width: formSize.width, height: formSize.height/2, alignment: .center)
                 .clipShape(RoundedRectangle(cornerRadius: 20))

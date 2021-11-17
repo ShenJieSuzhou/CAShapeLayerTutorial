@@ -34,7 +34,7 @@ struct BarChartView: View {
         return self.formSize == ChartForm.large
     }
     
-    public init(data:ChartData, title: String, style: ChartStyle = Styles.barChartStyleOrangeLight, form: CGSize? = ChartForm.medium, dropShadow: Bool? = true, cornerImage:Image? = Image(systemName: "waveform.path.ecg"), valueSpecifier: String? = "%.1f"){
+    public init(data:ChartData, title: String, style: ChartStyle = Styles.barChartStyleOrangeLight, form: CGSize? = ChartForm.extraLarge, dropShadow: Bool? = true, cornerImage:Image? = Image(systemName: "waveform.path.ecg"), valueSpecifier: String? = "%.1f"){
         self.data = data
         self.title = title
         self.style = style
@@ -68,19 +68,13 @@ struct BarChartView: View {
                         .foregroundColor(self.colorScheme == .dark ? self.darkModeStyle.legendTextColor : self.style.legendTextColor)
                 }.padding()
 
-//                GeometryReader{ geometry in
-//                    Line(data: self.data,
-//                         frame: .constant(geometry.frame(in: .local)),
-//                         touchLocation: self.$touchPoint,
-//                         showIndicator: self.$showValue,
-//                         minDataValue: .constant(nil),
-//                         maxDataValue: .constant(nil),
-//                         gradient: GradientColor(start: Color.clear, end: Color.clear)
-//                    )
-//                }
-//                .frame(width: formSize.width, height: formSize.height/2, alignment: .center)
-//                .clipShape(RoundedRectangle(cornerRadius: 20))
-//                .offset(x: 0, y: 0)
+                GeometryReader{ geometry in
+                    Line(data: self.data, frame: .constant(geometry.frame(in: .local)), touchLocation: self.$touchPoint, showIndicator: self.$showValue, minDataValue: .constant(nil), maxDataValue: .constant(nil), showBackground: false)
+                }
+                .frame(width: formSize.width, height: formSize.height/4, alignment: .center)
+                .clipShape(RoundedRectangle(cornerRadius: 20))
+                .offset(x: 0, y: 0)
+                .padding()
                 
                 BarChartRow(data: data.points.map{$0.1},
                             accentColor: self.colorScheme == .dark ? self.darkModeStyle.accentColor : self.style.accentColor,

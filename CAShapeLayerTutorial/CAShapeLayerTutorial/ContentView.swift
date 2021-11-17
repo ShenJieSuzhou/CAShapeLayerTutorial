@@ -51,7 +51,7 @@ struct BarCharts: View {
 struct LineChart: View {
     var body: some View {
         HStack {
-            LineChartView(data: [8,23,54,32,12,37,7,23,43], title: "", style: Styles.lineChartStyleOne).padding()
+            LineChartView(data: [8,23,54,32,12,37,7,23,43], title: "", style: Styles.barChartStyleOrangeDark).padding()
             MutiLineChartView(data: [([8,23,54,32,12,37,7,23,43], GradientColors.orange), ([5,30,40,12,16,7,57,30,13], GradientColors.purple)], title: "")
         }
     }
